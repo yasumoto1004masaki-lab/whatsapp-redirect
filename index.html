@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>リダイレクト中...</title>
+  <script>
+    // 1秒後にリダイレクト（1000ミリ秒）
+    setTimeout(() => {
+      const userAgent = navigator.userAgent.toLowerCase();
+
+      if (/iphone|ipad|ipod/.test(userAgent)) {
+        // iPhone / iPad
+        window.location.href = "https://apps.apple.com/jp/app/whatsapp-messenger/id310633997";
+      } else if (/android/.test(userAgent)) {
+        // Android
+        window.location.href = "https://play.google.com/store/apps/details?id=com.whatsapp";
+      } else {
+        // PC / その他
+        window.location.href = "https://www.whatsapp.com/";
+      }
+    }, 1000);
+  </script>
+</head>
+<body>
+  <p>1秒後にストアへ移動します。少々お待ちください...</p>
+</body>
+</html>
