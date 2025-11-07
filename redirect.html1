@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    setTimeout(() => {
+      const userAgent = navigator.userAgent;
+      if (/iPhone|iPad|iPod/i.test(userAgent)) {
+        // iPhone・iPad → App Store
+        window.location.href = "https://apps.apple.com/jp/app/whatsapp-messenger/id310633997";
+      } else if (/Android/i.test(userAgent)) {
+        // Android → Google Play
+        window.location.href = "https://play.google.com/store/apps/details?id=com.whatsapp";
+      } else {
+        // PCなどその他 → 公式サイト
+        window.location.href = "https://www.whatsapp.com/";
+      }
+    }, 1000);
+  </script>
+</head>
+<body>
+  <p>1秒後にストアへ移動します…</p>
+</body>
+</html>
